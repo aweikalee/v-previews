@@ -202,6 +202,9 @@ Vue.use(VPreviews, {
 
 
 ### Typescript
+```
+npm install @types/photoswipe --save-dev
+```
 ``` ts
 Vue.use<VPreviews.Options>(VPreviews, {
   /* 此处将有类型检查与代码提示 */

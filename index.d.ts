@@ -4,7 +4,7 @@ import PhotoSwipeUI_Default from 'photoswipe/dist/photoswipe-ui-default'
 
 declare namespace VPreviews {
     export interface Options {
-        photoswipe: PhotoSwipe,
+        photoswipe: any,
         ui?: any
         deep?: number
         options?: PhotoSwipeUI_Default.Options

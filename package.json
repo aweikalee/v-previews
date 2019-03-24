@@ -1,0 +1,29 @@
+{
+    "name": "v-previews",
+    "version": "0.0.1",
+    "description": "PhotoSwipe of Vue Directive",
+    "keywords": [
+        "v-previews",
+        "photoswipe",
+        "vue directive"
+    ],
+    "author": "aweikalee",
+    "license": "MIT",
+    "main": "./dist/v-previews.js",
+    "scripts": {
+        "build": "webpack --config webpack.config.js"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "@babel/cli": "^7.2.3",
+        "@babel/core": "^7.4.0",
+        "@babel/preset-env": "^7.4.2",
+        "@types/photoswipe": "^4.0.28",
+        "babel-loader": "^8.0.5",
+        "vue": "^2.6.10",
+        "vue-loader": "^15.7.0",
+        "vue-template-compiler": "^2.6.10",
+        "webpack": "^4.29.6",
+        "webpack-cli": "^3.3.0"
+    }
+}

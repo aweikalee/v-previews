@@ -8,7 +8,7 @@ npm install photoswipe v-previews --save
 ```
 
 ## Usage 使用方法
-```
+``` js
 import Vue from 'vue'
 import VPreviews from 'v-previews'
 import PhotoSwipe from 'photoswipe'
@@ -25,7 +25,7 @@ Vue.use(VPreviews, {
 ```
 
 ## Basic Example 基础实例
-```
+``` html
 <template>
   <div v-previews>
     <img src="http://dummyimage.com/200x100" data-src="http://dummyimage.com/200x100"/>
@@ -45,7 +45,7 @@ Vue.use(VPreviews, {
 
 #### 示例
 设置双击打开预览，并以`src`属性为准，不显示分享按钮。
-```
+``` html
 <template>
   <div v-previews:src.dblclick="options">
     <img src="http://dummyimage.com/200x100"/>
@@ -66,7 +66,7 @@ export default {
 ```
 
 ### Tag  Attributes 标签属性
-```
+``` js
 /* PhotoSwipe 官方示例 */
 var items = [
     {
@@ -83,7 +83,7 @@ var items = [
 按之前的设置，我们只能定义src的值，其他属性则需要通过`data-msrc`, `data-w`, `data-h`, `data-html`来定义。
 
 #### 示例
-```
+``` html
 <template>
   <div v-previews>
     <img
@@ -120,7 +120,7 @@ var items = [
 默认是以`v-previews`对象下所有子节点为一组，如果需要手动分组，可以在子节点添加`data-group`标签。
 
 #### 示例
-```
+``` html
 <template>
   <div v-previews:src>
     <img src="http://dummyimage.com/200x100"/>
@@ -134,7 +134,7 @@ var items = [
 ```
 
 ### Global Options 全局设置
-```
+``` js
 import Vue from 'vue'
 import VPreviews from 'v-previews'
 import PhotoSwipe from 'photoswipe'
@@ -160,7 +160,7 @@ Vue.use(VPreviews, {
 - `getThumbBoundsFn` 点击图片，弹出PhotoSwipe组件时的过渡效果。
 
 ### Deep Option 深度设置
-```
+``` html
 <template>
   <div v-previews>
     <div
@@ -190,7 +190,7 @@ Vue.use(VPreviews, {
 ```
 当对象是上面这种不是单纯的`img`的时候，需要在`全局设置`里设置`deep`属性，默认为`0`。
 
-```
+``` js
 Vue.use(VPreviews, {
   photoswipe: PhotoSwipe,
   ui: PhotoSwipeUI_Default,
@@ -202,7 +202,7 @@ Vue.use(VPreviews, {
 
 
 ### Typescript
-```
+``` ts
 Vue.use<VPreviews.Options>(VPreviews, {
   /* 此处将有类型检查与代码提示 */
   photoswipe: PhotoSwipe,

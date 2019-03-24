@@ -9,6 +9,11 @@
     ],
     "author": "aweikalee",
     "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/aweikalee/v-previews.git"
+    },
+    "homepage": "https://github.com/aweikalee/v-previews",
     "main": "./dist/v-previews.js",
     "scripts": {
         "build": "webpack --config webpack.config.js"

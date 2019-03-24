@@ -56,7 +56,7 @@ export default {
                     }
 
                     const swipe = mount(vue)
-                    if (swipe.vm) {
+                    if (swipe._vm) {
                         return
                     }
 

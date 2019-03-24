@@ -1,7 +1,7 @@
 <script>
 export default {
     data() {
-        return { show: false, timer: 0, vm: null }
+        return { show: false, timer: 0, _vm: null }
     },
 
     methods: {
@@ -64,29 +64,29 @@ export default {
             )
 
             /* 实例化 */
-            this.vm = new photoswipe(this.$refs.pswp, ui, items, mergeOptions)
+            this._vm = new photoswipe(this.$refs.pswp, ui, items, mergeOptions)
 
             /* 获取图片真实长宽 */
-            this.vm.listen('imageLoadComplete', (i, item) => {
+            this._vm.listen('imageLoadComplete', (i, item) => {
                 const img = new Image()
                 img.src = item.src
                 img.onload = () => {
                     item.w = img.width
                     item.h = img.height
-                    this.vm.updateSize(true)
+                    this._vm.updateSize(true)
                 }
             })
 
             /* 10秒后销毁dom */
-            this.vm.listen('close', () => {
-                this.vm = null
+            this._vm.listen('close', () => {
+                this._vm = null
                 this.timer = setTimeout(() => {
                     this.show = false
                 }, 10000)
             })
 
             /* 显示 */
-            this.vm.init()
+            this._vm.init()
         }
     }
 }
